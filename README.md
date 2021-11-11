@@ -18,6 +18,7 @@ The votes that came in from these three counties were cast towards three candida
   * Raymon Anthony Doane only came in with **3.1% of the vote** for a total of **11,606 votes**. 
 
 Below is a screenshot of the output file we created in our script:
+
 <img width="305" alt="Screen Shot 2021-11-11 at 1 18 53 PM" src="https://user-images.githubusercontent.com/92702922/141356059-6cbb6cd5-c5ae-441d-8bc8-12d51db4738e.png">
 
 ## Election Audit Summary
