@@ -24,22 +24,25 @@ The votes that came in from these three counties were cast towards three candida
 Since this script reads in a comma-separated value dataset that displays ballot ID's, candidate choice, and county for every vote cast, this script can easily be replicated and slightly modified to be applied for future elections, as it outputs voting breakdown by government unit and candidate, as well as the government unit with the largest turnout and the candidate winner of the race. Simple modifications include:
 
 * modifying the file names that are input and output in the script, as seen here: 
- `# Add a variable to load a file from a path.
+```
+  # Add a variable to load a file from a path.
   file_to_load = os.path.join("Resources", "election_results.csv")
   # Add a variable to save the file to a path.
-  file_to_save = os.path.join("analysis", "election_results.txt")`
-
+  file_to_save = os.path.join("analysis", "election_results.txt")
+```
 * *potentially* altering lines in the script that reference specific columns of data to make sure they read the correct candidate or county name for every row of data (votes), as shown below, depending on the format of the rows and columns of the file that is read into our script. Here, `row[1]` references the second column of the dataset for any particular row (which in this case is the name of the county) while `row[2]` references the third column of the data for any row (in this case, the name of the candidate).
- `# Get the candidate name from each row.
+ ```
+  # Get the candidate name from each row.
   candidate_name = row[2]
   # Extract the county name from each row.
-  county_name= row [1]`
-  
+  county_name= row [1]
+  ```
 * renaming variables as the ones seen below to reflect Colorado counties, cities, and senatorial districts for local, municipal, and even presidential elections, also depending on the format of the data that is read into our script: 
-`county_list = []
+```
+ county_list = []
  county_votes= {}
  winning_county= ""
  winning_turnout= 0
- winning_cpercentage= 0`
-
+ winning_cpercentage= 0
+```
 With these simple modifications, this code can easily be applied to reading datasets that have a large number of votes regardless of the type of election, as it will display the necessary information that is required for any level of election.
